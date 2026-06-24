@@ -1,0 +1,27 @@
+name: food_delivery_dwh
+version: 1.0.0
+config-version: 2
+
+profile: food_delivery_dwh
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  food_delivery_dwh:
+    staging:
+      +schema: staging
+
+    datamart:
+      +schema: data_mart
+
+    datavault:
+      +schema: data_vault

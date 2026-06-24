@@ -1,0 +1,18 @@
+
+version: 2
+
+sources:
+  - name: staging
+    description: "Tables staging avec les données brutes"
+    database: postgres
+    schema: staging
+    tables:
+      - name: stg_orders
+      - name: stg_drivers
+      - name: stg_customers
+      - name: stg_dishes
+      - name: stg_restaurants
+      - name: stg_deliveries
+      - name: stg_payments
+      - name: stg_order_lines
+
